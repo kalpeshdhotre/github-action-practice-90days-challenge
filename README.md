@@ -1,1 +1,2 @@
-# github-action-practice-90days-challenge
+# GitHub Actions Practice
+Learning GitHub Actions as part of #90DaysOfDevOps
