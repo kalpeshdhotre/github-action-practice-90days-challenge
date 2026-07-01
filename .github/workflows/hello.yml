@@ -23,3 +23,6 @@ jobs:
 
       - name: Print runer OS
         run: echo " Runner OS -> ${{ runner.os }}"
+
+      - name: Intentional break code
+        run: exit 1
