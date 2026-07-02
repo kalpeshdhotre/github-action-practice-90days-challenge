@@ -61,3 +61,8 @@ jobs:
 
       - name: Print Python version
         run: python --version
+
+        # To check failure
+      - name: Force a failure
+        if: matrix.python-version == '3.11' && matrix.os == 'ubuntu-latest'
+        run: exit 1
