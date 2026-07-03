@@ -1,0 +1,31 @@
+name: Hosted Runners Demo
+
+on: push
+
+jobs:
+  ubuntu-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: System info
+        run: |
+          echo "OS: $(uname -a)"
+          echo "Hostname: $(hostname)"
+          echo "User: $(whoami)"
+
+  windows-job:
+    runs-on: windows-latest
+    steps:
+      - name: System info
+        run: |
+          echo "OS: Windows"
+          echo "Hostname: $env:COMPUTERNAME"
+          echo "User: $env:USERNAME"
+
+  macos-job:
+    runs-on: macos-latest
+    steps:
+      - name: System info
+        run: |
+          echo "OS: $(sw_vers)"
+          echo "Hostname: $(hostname)"
+          echo "User: $(whoami)"

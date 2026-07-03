@@ -1,6 +1,8 @@
 name: Hello Workflow
 
-on: push
+# Disabled on push temp for Day-42
+# on: push
+on: workflow_dispatch
 
 jobs:
   greet:
@@ -19,8 +21,7 @@ jobs:
         run: echo "Triggered by branch -> ${{ github.ref_name }}"
 
       - name: List files in repo
-        run: ls -la 
+        run: ls -la
 
       - name: Print runer OS
         run: echo " Runner OS -> ${{ runner.os }}"
-

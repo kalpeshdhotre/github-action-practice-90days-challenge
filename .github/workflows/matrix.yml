@@ -1,6 +1,8 @@
 name: Matrix Build
 
-on: push
+# Disabled on push temp for Day-42
+# on: push
+on: workflow_dispatch
 
 # jobs:
 #   test:
