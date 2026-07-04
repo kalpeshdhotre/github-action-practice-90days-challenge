@@ -1,0 +1,27 @@
+name: Conditionals Demo
+
+on: [push, pull_request]
+
+jobs:
+  push-only-job:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    steps:
+      - name: Only runs on push
+        run: echo "This job only runs on push events, not PRs"
+
+  main-branch-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Runs only on main
+        if: github.ref == 'refs/heads/main'
+        run: echo "This step only runs on the main branch"
+
+      - name: A step that might fail
+        id: risky
+        continue-on-error: true
+        run: exit 1
+
+      - name: Runs only if previous step failed
+        if: steps.risky.outcome == 'failure'
+        run: echo "Previous step failed — running cleanup/alert logic"
