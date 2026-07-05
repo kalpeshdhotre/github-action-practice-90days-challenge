@@ -1,8 +1,12 @@
 name: Task 5
 
-on:
-  push:
-    branches: ["**"]
+# Disabled on push temp for Day-42
+# on: push
+on: workflow_dispatch
+
+# on:
+#   push:
+#     branches: ["**"]
 
 jobs:
   lint:

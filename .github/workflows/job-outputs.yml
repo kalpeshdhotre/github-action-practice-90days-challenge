@@ -1,6 +1,9 @@
 name: Job Outputs Demo
 
-on: push
+# on: push
+
+# Disabled on push temp for Day-42
+on: workflow_dispatch
 
 jobs:
   generate-date:

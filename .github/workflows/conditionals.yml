@@ -1,6 +1,10 @@
 name: Conditionals Demo
 
-on: [push, pull_request]
+# on: [push, pull_request]
+
+# Disabled on push temp for Day-42
+# on: push
+on: workflow_dispatch
 
 jobs:
   push-only-job:
