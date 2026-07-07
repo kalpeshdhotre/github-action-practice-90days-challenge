@@ -1,10 +1,14 @@
 name: Docker Build and push
 
-on:
-  push:
-    branches:
-      - main
-      - "**"
+# on:
+#   push:
+#     branches:
+#       - main
+#       - "**"
+
+# on: push
+# Disabled on push temp for Day-42
+on: workflow_dispatch
 
 env:
   IMAGE_NAME: kalpeshdhotre/todo-api
