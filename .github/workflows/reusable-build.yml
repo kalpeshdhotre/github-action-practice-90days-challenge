@@ -42,3 +42,7 @@ jobs:
           VERSION="v1.0-${SHORT_SHA}"
           echo "Generated version: ${VERSION}"
           echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+
+      - name: Debug step output
+        run: |
+          echo "Step output = '${{ steps.set_version.outputs.version }}'"
