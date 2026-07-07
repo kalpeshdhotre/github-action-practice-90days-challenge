@@ -18,4 +18,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print build version from resuable workflow
-        run: echo "Build version was ${{ needs.build.outputs.built_version }}"
+        run: echo "Build version was ${{ needs.build.outputs.build_version }}"
