@@ -17,7 +17,7 @@ on:
         description: "Docker hub token used for authenticated pushes"
         required: true
     outputs:
-      built_version:
+      build_version:
         description: "Generated version string for this build"
         value: ${{ jobs.build.outputs.version }}
 
@@ -42,7 +42,3 @@ jobs:
           VERSION="v1.0-${SHORT_SHA}"
           echo "Generated version: ${VERSION}"
           echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
-
-      - name: Debug step output
-        run: |
-          echo "Step output = '${{ steps.set_version.outputs.version }}'"
