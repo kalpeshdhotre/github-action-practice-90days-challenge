@@ -33,7 +33,7 @@ jobs:
       - name: Print build info
         run: |
           echo "Building ${{ inputs.app_name }} for ${{ inputs.environment }}"
-          echo `Docker Token is set: true`
+          echo "Docker Token is set: true"
 
       - name: Generate version string
         id: set_version
