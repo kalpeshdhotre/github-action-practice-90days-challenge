@@ -41,4 +41,4 @@ jobs:
           SHORT_SHA=$(git rev-parse --short HEAD)
           VERSION="v1.0-${SHORT_SHA}"
           echo "Generated version: ${VERSION}"
-          echo "version=${VERSION}" >> "GITHUB_OUTPUT"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
