@@ -1,0 +1,17 @@
+name: Greet Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+
+      - name: Setup and greet
+        id: greeting
+        uses: ./.github/workflows/setup-and-greet
+        with:
+          name: "Kalpesh KD"
