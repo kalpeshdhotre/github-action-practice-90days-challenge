@@ -1,0 +1,16 @@
+name: Smart Triggers
+
+on:
+  push:
+    branches:
+      - main
+      - "release/*"
+    paths:
+      - "src/**"
+      - "app/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Code change detected in src/ or app/ on an allowed branch"

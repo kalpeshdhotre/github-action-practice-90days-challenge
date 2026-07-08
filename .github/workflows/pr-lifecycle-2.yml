@@ -1,0 +1,16 @@
+name: Skip Docs-Only Changes
+
+on:
+  push:
+    branches:
+      - main
+      - "release/*"
+    paths-ignore:
+      - "*.md"
+      - "docs/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Non-docs change detected — running full pipeline"
