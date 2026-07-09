@@ -1,12 +1,12 @@
 name: Nightly Job CRON
 
 # Disabled below scheduled block  for testing day-42 practice
-# on:
-#   schedule:
-#     - cron: '36 14 * * *'
-
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: "45 12 * * *"
+
+# on:
+#   workflow_dispatch:
 
 jobs:
   nightly:
